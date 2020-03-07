@@ -11,6 +11,9 @@
     <li><router-link to="/contacts"><a href="#"> Контакты </a></router-link></li>
     </ul>
     </div>
+    <div class="mobile_menu">
+    <a href="#" class="menu_btn"><img :src="require('./menu.png')" /></a>
+    </div>
   </div>
   </div>
 </template>
@@ -22,6 +25,7 @@ export default {
 </script>
 
 <style scoped>
+@media screen{
 .header {
 color: white;
 height: 70px;
@@ -32,7 +36,7 @@ background-color: black;
 display: flex;
 align-items: center;
 justify-content: center;
-width: 1000px;
+width: 100%;
 height: 100%;
 margin: auto;
 }
@@ -40,6 +44,9 @@ margin: auto;
 flex-grow: 3;
 font-family: "Ubuntu";
 font-size: 40px;
+}
+.mobile_menu {
+display: none;
 }
 .nav {
 flex-grow: 1;
@@ -69,5 +76,20 @@ text-decoration: none;
 color: white;
 margin-top: 25px;
 border-bottom: 4px solid white;
+}
+}
+@media (max-width: 769px) {
+.logo {
+margin-left: 20px;
+}
+.nav, ul {
+display: none;
+}
+.mobile_menu {
+flex-grow: 1;
+display: flex;
+justify-content: flex-end;
+margin-right: 20px;
+}
 }
 </style>

@@ -13,7 +13,7 @@
     <div class="telephone">8-982-707-7-207</div>
     <div class="mail">info@neli66.ru</div>
     </div>
-    <a href="#" class="instagram"><img src="src/components/img/instagram.png" /></a>
+    <a href="#" class="instagram"><img :src="require('./instagram.png')" /></a>
   </div>
   </div>
 </template>
@@ -87,5 +87,13 @@ text-decoration: none;
 color: white;
 margin-top: 25px;
 border-bottom: 4px solid white;
+}
+
+@media (max-width: 769px) {
+
+.footer {
+display: none;
+}
+
 }
 </style>
