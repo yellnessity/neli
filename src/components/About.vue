@@ -1,87 +1,105 @@
 <template>
-  <div class=about>
-  <div class="banner">
-        <div class="description">
-            <div class="description-holder">
-            <h1>Нестандартные элементы в интерьере</h1>
-            <div class="inner">
-            В современном интерьере популярно использовать самые разнообразные
-            декоративные элементы, которые способны преобразить дизайн помещения
-            и придать ему особый индивидуальный стиль.
+<div class="about">
+<div class="banner">
+      <div class="description">
+          <div class="description-holder">
+          <h1 class="banner_title">Нестандартные элементы в интерьере</h1>
+          <div class="inner">
+          В современном интерьере популярно использовать самые разнообразные
+          декоративные элементы, которые способны преобразить дизайн помещения
+          и придать ему особый индивидуальный стиль.
+          </div>
+          <router-link to="/projects"><a href="#">Посмотреть работы</a></router-link>
+          </div>
+      </div>
+</div>
+<div class="container">
+      <div class="projects">
+            <div class="title-projects">
+                  <h2> Что мы изготовляем </h2>
+                  <span> Придадим Вашему интерьеру особый стиль.</span>
             </div>
-            <router-link to="/projects"><a href="#">Посмотреть работы</a></router-link>
+            <router-link :to="{ name:'project', params: { id: 0, name:'stairs' } }">
+            <a href="#" class="block1">
+                  <div class="block-wrapper">
+                  <span>Лестницы</span>
+                  </div>
+            </a>
+            </router-link>
+            <router-link :to="{ name:'project', params: { id: 1, name:'borders' } }">
+            <a href="#" class="block2">
+                  <div class="block-wrapper">
+                  <span>Ограждения, перегородки, полы из стекла и металла</span>
+                  </div>
+            </a>
+            </router-link>
+            <router-link :to="{ name:'project', params: { id: 2, name:'terraces' } }">
+            <a href="#" class="block3">
+                  <div class="block-wrapper">
+                  <span>Остекление террас</span>
+                  </div>
+            </a>
+            </router-link>
+      </div>
+      <div class="advantages">
+            <div class="adv-cover">
+                  <div class="adv-overlay">
+                        <h2> Почему мы? </h2>
+                  </div>
             </div>
+            <div class="list">
+                  <div class="adv1">
+                        <h2>Надёжность</h2>
+                        <p>Мы работаем с 1996 года</p>
+                  </div>
+                  <div class="adv2">
+                        <h2>На все руки</h2>
+                        <p>Наши мастера выполнят
+                        работу в соответствии с Вашими требованиями.</p>
+                  </div>
+                  <div class="adv3">
+                        <h2>Время выполнения</h2>
+                        <p>Мы выполним Ваш заказ
+                        в кратчайшие сроки</p>
+                  </div>
+            </div>
+      </div>
+      <div class="clients">
+            <div class="clients-cover">
+                  <h2> Станьте нашим клиентом! </h2>
+            </div>
+            <div class="clients-list">
+                  <p> Среди наших клиентов: </p>
+                  <ul>
+                        <li>ТЦ "Гринвич"</li>
+                        <li>ТЦ "Алатырь"</li>
+                        <li>ТЦ "Галерея 11"</li>
+                        <li>ТЦ "Ханой"</li>
+                        <li>ЖК "Правобережный"</li>
+                        <li>Сеть стоматологий "Белая Ладья"</li>
+                  </ul>
+            </div>
+      </div>
+      <div class="contact">
+        <div class="contact-overlay">
+        <div class="contact-title">
+          <h2>Свяжитесь с нами <br>и сделайте <br>первый заказ!</h2>
         </div>
-  </div>
-  <div class="container">
-        <div class="projects">
-              <div class="title-projects">
-                    <h2> Что мы изготовляем </h2>
-                    <span> Придадим Вашему интерьеру особый стиль.</span>
-              </div>
-              <router-link :to="{ name:'project', params: { id: 0, name:'stairs' } }">
-              <a href="#" class="block1">
-                    <div class="block-wrapper">
-                    <span>Лестницы</span>
-                    </div>
-              </a>
-              </router-link>
-              <router-link :to="{ name:'project', params: { id: 1, name:'stairs' } }">
-              <a href="#" class="block2">
-                    <div class="block-wrapper">
-                    <span>Водные панели</span>
-                    </div>
-              </a>
-              </router-link>
-              <router-link :to="{ name:'project', params: { id: 2, name:'stairs' } }">
-              <a href="#" class="block3">
-                    <div class="block-wrapper">
-                    <span>Лайтбоксы</span>
-                    </div>
-              </a>
-              </router-link>
+        <div class="contact-items">
+          <div class="location">
+            <p>г. Екатеринбург, ул. Серафимы Дерябиной, 24, оф. 403</p>
+          </div>
+          <div class="telephone">
+            <p>8-982-707-7-207</p>
+          </div>
+          <div class="mail">
+            <p>info@neli66.ru</p>
+          </div>
         </div>
-        <div class="advantages">
-              <div class="adv-cover">
-                    <div class="adv-overlay">
-                          <h2> Почему мы? </h2>
-                    </div>
-              </div>
-              <div class="list">
-                    <div class="adv1">
-                          <h2>Надёжность</h2>
-                          <p>Мы работаем с 1996 года</p>
-                    </div>
-                    <div class="adv2">
-                          <h2>На все руки</h2>
-                          <p>Наши мастера выполнят
-                          работу в соответствии с Вашими требованиями.</p>
-                    </div>
-                    <div class="adv3">
-                          <h2>Время выполнения</h2>
-                          <p>Мы выполним Ваш заказ
-                          в кратчайшие сроки</p>
-                    </div>
-              </div>
-        </div>
-        <div class="clients">
-              <div class="clients-cover">
-                    <h2> Станьте нашим клиентом! </h2>
-              </div>
-              <div class="clients-list">
-                    <p> Среди наших клиентов: </p>
-                    <ul>
-                          <li>ТЦ "Гринвич"</li>
-                          <li>ТЦ "Алатырь"</li>
-                          <li>ТЦ "Галерея 11"</li>
-                          <li>ТЦ "Ханой"</li>
-                          <li>ЖК "Правобережный"</li>
-                          <li>Сеть стоматологий "Белая Ладья"</li>
-                    </ul>
-              </div>
-        </div>
-  </div>
-  </div>
+      </div>
+      </div>
+</div>
+</div>
 </template>
 
 <script>
@@ -91,6 +109,10 @@ export default {
 </script>
 
 <style scoped>
+body {
+  margin: 0;
+  padding: 0;
+}
 
 .about {
 flex: 1 0 auto;
@@ -100,9 +122,13 @@ flex: 1 0 auto;
 height: 400px;
 margin: 0 auto;
 background: url(img/stairs.jpg) 50% 80% no-repeat;
-background-size: 1400px;
+background-size: cover;
 width: auto;
 position: relative;
+}
+
+.banner_title {
+font-weight: 700;
 }
 
 .description {
@@ -114,9 +140,9 @@ position: absolute;
 }
 
 .description-holder {
-width: 1000px;
+width: auto;
 position: relative;
-margin: 50px auto;
+margin: 66px 10%;
 }
 
 h1 {
@@ -356,5 +382,174 @@ font-family: Roboto;
 font-size: 15px;
 color: #696969;
 }
+
+.contact {
+  display: none;
+}
+
+@media (max-width: 769px) {
+
+.banner {
+height: 600px;
+}
+
+.description-holder {
+margin: 100px auto;
+}
+
+.description-holder h1 {
+font-weight: 700;
+font-size: 40px;
+}
+
+.description-holder a {
+margin: 30px auto;
+}
+
+.banner_title {
+text-align: center;
+margin: 0 auto;
+width: auto;
+}
+
+.inner {
+text-align: center;
+width: auto;
+margin: 25px 15px;
+}
+
+.title-projects span {
+display: none;
+}
+
+.projects {
+width: auto;
+height: auto;
+flex-direction: column;
+}
+
+.title-projects, .block1, .block2, .block3 {
+  padding: 10px 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.title-projects {
+height: 100%;
+margin-bottom: 40px;
+}
+
+.title-projects h2 {
+  margin: 0 auto;
+}
+
+.adv-cover {
+  width: 100%;
+  height: 0;
+  margin: 0 auto;
+}
+
+.adv-cover h2 {
+background: none;
+margin: 0px 18.5%
+}
+
+.adv-overlay {
+background: none;
+}
+
+.advoverlay h2 {
+margin: 6% auto;
+}
+
+.adv1>h2, .adv2>h2, .adv3>h2 {
+margin-left: 40%;
+letter-spacing: 0;
+}
+
+.adv1>p, .adv2>p, .adv3>p {
+margin-left: 40%;
+}
+
+.clients {
+display: none;
+}
+
+.block-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.block1 span, .block2 span, .block3 span {
+  text-align: center;
+  bottom: auto;
+  width: 250px;
+}
+
+.advantages {
+  flex-direction: column;
+}
+
+.contact {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(img/advantages-cover.jpg)
+}
+
+.contact-title {
+  font-family: Ubuntu;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.contact-overlay {
+  width: 300px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-items {
+  font-family: Roboto;
+  background-color: white;
+  padding: 10px 20px;
+}
+
+.location {
+  background: no-repeat 0 50% url(img/pin.png);
+  background-size: 18px;
+}
+
+.mail {
+  background: no-repeat 0 50% url(img/envelope.png);
+  background-size: 18px;
+}
+
+.telephone {
+  background: no-repeat 0 50% url(img/phone.png);
+  background-size: 18px;
+}
+
+.location > p, .mail > p, .telephone > p {
+  margin-left: 40px;
+}
+
+.list {
+  border: 0;
+  margin-left: 0;
+  margin-top: 145px;
+  margin-bottom: 45px;
+  width: 100%;
+}
+
+.adv1, .adv2, .adv3 {
+  background-position: 20% 50%;
+}
+
+}
+
 
 </style>

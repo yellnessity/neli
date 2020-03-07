@@ -64,4 +64,12 @@ height: 400px;
 background-color: transparent;
 }
 
+@media (max-width: 769px) {
+
+p {
+  width: 100%;
+}
+
+}
+
 </style>
